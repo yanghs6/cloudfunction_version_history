@@ -329,3 +329,4 @@ $RECYCLE.BIN/
 # ETC
 .gcloudignore
 .gitignore
+readme.md
