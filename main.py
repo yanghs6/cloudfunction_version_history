@@ -28,13 +28,11 @@ def check_version_list(request):
             print(f"{blob.name}, {blob.generation}, {blob.updated}")
             
         response = {
-            "status"    : "success",
             "code"      : 200,
             "content"   : content
         }
     except GoogleAuthError as e:
         response = {
-            "status"    : "fail",
             "code"      : 403,
             "content"   : {
                 "message"       : "Error in google.auth",
@@ -43,7 +41,6 @@ def check_version_list(request):
         }
     except:
         response = {
-            "status"    : "fail",
             "code"      : 400,
             "content"   : {
                 "message"       : "message is message",
